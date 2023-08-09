@@ -6,11 +6,11 @@ import IconBookmark from "@/components/icons/IconBookmark.vue";
 <template>
   <div>
     <nav>
-      <div class="flex-between py-8 bg-black px-8 text-white">
+      <div class="flex-between py-4 bg-dark px-8 text-white">
         <div class="flex-items-center gap-x-8">
           <div class="brand">
             <RouterLink :to="{ name: 'home' }">
-              <div class="first-letter:text-red-500 text-3xl">
+              <div class="first-letter:text-primary text-3xl">
                 Movies
               </div></RouterLink
             >
@@ -33,7 +33,9 @@ import IconBookmark from "@/components/icons/IconBookmark.vue";
         </div>
       </div>
     </nav>
-    <RouterView />
+    <div class="w-full">
+      <RouterView />
+    </div>
   </div>
 </template>
 <style scoped></style>
