@@ -4,4 +4,5 @@
 
 @import "tailwindcss/utilities";
 @import "./_fonts.css";
+@import "./_utilities.css";
 @import "./_base.css";
