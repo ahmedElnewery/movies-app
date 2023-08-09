@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
 
-
-      
 </script>
 
 <template>
- <div>hello movie app</div>
+ <div class="text-red-500 text-3xl">hello movie app</div>
 
 </template>
 
