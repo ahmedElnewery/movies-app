@@ -1,13 +1,7 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
- <div class="text-red-500 text-3xl">hello movie app</div>
-
+  <RouterView />
 </template>
 
-<style scoped>
-
-
-</style>
+<style scoped></style>
