@@ -1,7 +1,8 @@
+<script setup lang="ts">
+import HomeHeader from "./../components/HomeHeader.vue";
+</script>
 <template>
-  <div>hello home</div>
+  <HomeHeader />
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped></style>
