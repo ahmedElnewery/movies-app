@@ -10,7 +10,7 @@ export default [
     children: [
       { name: "movies", path: "", component: MoviesList },
       { name: "movieDetails", path: ":id", component: MovieDetails },
+      { name: "wishlist", path: "wishlist", component: WishList },
     ],
   },
-  { name: "wishlist", path: "wishlist", component: WishList },
 ];

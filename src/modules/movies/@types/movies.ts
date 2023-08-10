@@ -8,6 +8,7 @@ export interface IMovie {
   crew: string;
   imDbRating: string;
   imDbRatingCount: string;
+  isBookmarked: boolean;
 }
 export interface MoviesCollectionsProps {
   movies: IMovie[];

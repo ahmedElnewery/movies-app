@@ -4,6 +4,7 @@ import type { IMovie } from "../@types/movies";
 defineProps<{
   movie: IMovie;
 }>();
+const emit = defineEmits(["toggle-bookmark"]);
 </script>
 
 <template>
@@ -19,26 +20,31 @@ defineProps<{
       :to="{ name: 'movieDetails', params: { id: movie.id } }"
       class="absolute inset-0 z-20"
     ></RouterLink>
-    <div
-      class="absolute z-30 left-0 right-0 top-0 flex h-1/4 w-full flex-col justify-end overlay-top px-4 pb-4 opacity-100 transition-opacity duration-300"
-    >
-      <button class="absolute top-6 right-6 text-yellow">
+    <div class="overlay overlay-top">
+      <button
+        class="absolute sm:top-6 sm:end-6 top-3 end-3 text-yellow"
+        :class="[movie.isBookmarked ? 'fill-yellow' : 'fill-orange-100']"
+        @click="emit('toggle-bookmark', { id: movie.id })"
+      >
         <IconBookmark />
       </button>
     </div>
-    <div
-      class="absolute left-0 right-0 bottom-0 z-10 flex h-1/2 w-full flex-col justify-end overlay-bottom px-4 pb-3 opacity-0 transition-opacity duration-300 group-hover:opacity-90"
-    >
+    <div class="overlay overlay-bottom">
       <p class="text-white truncate">{{ movie.fullTitle }}</p>
     </div>
   </div>
 </template>
 
 <style scoped>
+.overlay {
+  @apply absolute left-0 right-0  px-4 pb-3 transition-opacity duration-300;
+}
 .overlay-top {
+  @apply z-30  top-0  h-1/4 w-full opacity-100;
   background: linear-gradient(to top, transparent 0%, black 75%);
 }
 .overlay-bottom {
+  @apply bottom-0 z-10 flex h-1/2 w-full flex-col justify-end  opacity-0  group-hover:opacity-90;
   background: linear-gradient(to bottom, transparent 0%, black 75%);
 }
 </style>

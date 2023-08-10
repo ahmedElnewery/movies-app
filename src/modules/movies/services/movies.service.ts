@@ -12,5 +12,11 @@ class MoviesService {
   static getMovieDetails(id: string) {
     return api().get(`/movies/${id}`);
   }
+  static getBookmarkedMovies() {
+    return api().get(`/movies/?isBookmarked=true`);
+  }
+  static updateBookmarkedMovie(id: string, data: any) {
+    return api().patch(`/movies/${id}`, data);
+  }
 }
 export default MoviesService;

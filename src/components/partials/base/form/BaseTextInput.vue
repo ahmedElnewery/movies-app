@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { TextInputProps } from "@/components/@types/input";
 const { type = "text" } = defineProps<TextInputProps>();
+const emit = defineEmits(["update:modelValue", "blur"]);
 </script>
 <template>
   <div class="relative">
@@ -12,9 +13,9 @@ const { type = "text" } = defineProps<TextInputProps>();
       autocomplete="off"
       :placeholder="placeholder"
       @input="
-        $emit('update:modelValue', ($event.target as HTMLInputElement).value)
+        emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
-      @blur="$emit('blur')"
+      @blur="emit('blur')"
     />
     <span
       class="icon"

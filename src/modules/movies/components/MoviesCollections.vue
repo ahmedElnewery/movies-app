@@ -4,6 +4,7 @@ import type { MoviesCollectionsProps } from "../@types/movies";
 import MovieCard from "./MovieCard.vue";
 
 defineProps<MoviesCollectionsProps>();
+const emit = defineEmits(["toggle-bookmark"]);
 </script>
 <template>
   <div
@@ -14,6 +15,12 @@ defineProps<MoviesCollectionsProps>();
       :movie="movie"
       :key="movie.id"
       v-if="!loading"
+      @toggle-bookmark="
+        emit('toggle-bookmark', {
+          id: movie.id,
+          isBookmarked: movie.isBookmarked,
+        })
+      "
     />
     <BaseSkeleton v-else v-for="i in 8" class="h-[300px] w-full" />
   </div>
