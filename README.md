@@ -5,3 +5,7 @@
 ```
 npm run dev
 ```
+
+### version
+
+**node version:** React, Redux, TailwindCSS
