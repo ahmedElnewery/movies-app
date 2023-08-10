@@ -5,7 +5,7 @@ const { type = "text" } = defineProps<TextInputProps>();
 <template>
   <div class="relative">
     <input
-      class="w-full py-3 ps-12 pe-6 outline-0 rounded-full text-lg border border-muted-900"
+      class="input"
       :value="modelValue"
       :type="type"
       autocomplete="off"
@@ -16,7 +16,7 @@ const { type = "text" } = defineProps<TextInputProps>();
       @blur="$emit('blur')"
     />
     <span
-      class="absolute top-1/2 z-10 -translate-y-1/2"
+      class="icon"
       v-if="iconPosition"
       :class="[iconPosition === 'right' ? 'end-3' : 'start-3']"
     >
@@ -26,5 +26,14 @@ const { type = "text" } = defineProps<TextInputProps>();
   </div>
 </template>
 
-<style scoped></style>
-../../../@types/input.type @/components/@types/input
+<style scoped>
+.input {
+  @apply w-full py-3 ps-12 pe-6 outline-0 rounded-full text-lg border border-muted-900 focus:border-primary shadow;
+}
+.icon {
+  @apply absolute top-1/2 z-10 -translate-y-1/2;
+}
+.input:focus + .icon {
+  @apply text-primary !important;
+}
+</style>

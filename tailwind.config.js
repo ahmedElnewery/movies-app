@@ -14,7 +14,7 @@ module.exports = {
       colors:{
           dark:"#000000",
           white:"#ffffff",
-          primary:"#6100C2",
+          primary:"#6C63FF",
           muted:{
             900:'#181818'
           },

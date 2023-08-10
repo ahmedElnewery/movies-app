@@ -6,9 +6,10 @@ import BaseContainer from "@/components/partials/base/BaseContainer.vue";
 import MovieCard from "../components/MovieCard.vue";
 import AppSearchInput from "@/components/partials/app/AppSearchInput.vue";
 import axios, { type CancelTokenSource } from "axios";
+import BaseSkeleton from "@/components/partials/base/BaseSkeleton.vue";
 
 //data
-const loading: Ref<boolean> = ref(false);
+const loading: Ref<boolean> = ref(true);
 const moviesList: Ref<IMovie[]> = ref([]);
 const errorMessage: Ref<string> = ref("");
 const searchQuery: Ref<string> = ref("");
@@ -36,7 +37,10 @@ async function fetchMovies(search = "") {
   } catch (error) {
     console.error(error);
   } finally {
-    loading.value = false;
+    // fake wait loading
+    setTimeout(() => {
+      loading.value = false;
+    }, 300);
   }
 }
 // watch
@@ -47,9 +51,9 @@ watch(searchQuery, (newSearchQuery) => {
 </script>
 <template>
   <main>
-    <div class="py-8 min-h-screen">
+    <div class="py-8 bg-muted-900 min-h-screen">
       <BaseContainer>
-        <div class="perfect-center mb-12">
+        <div class="perfect-center mt-12 mb-12">
           <div class="w-1/2">
             <AppSearchInput v-model="searchQuery" />
           </div>
@@ -61,7 +65,26 @@ watch(searchQuery, (newSearchQuery) => {
             v-for="movie in moviesList"
             :movie="movie"
             :key="movie.id"
+            v-if="!loading"
           />
+          <BaseSkeleton v-else v-for="i in 8" class="h-[300px]" />
+        </div>
+        <div
+          class="text-center perfect-center min-h-[400px]"
+          v-if="!loading && moviesList.length === 0"
+        >
+          <div>
+            <p class="mb-12 font-medium text-2xl text-white">
+              <span class="text-primary me-3">Oops!</span> Your movie magic
+              search came up empty
+            </p>
+
+            <img
+              src="@/assets/img/no-results-searching.svg"
+              class="max-w-sm lg:max-w-xl"
+              alt="not result"
+            />
+          </div>
         </div>
       </BaseContainer>
     </div>

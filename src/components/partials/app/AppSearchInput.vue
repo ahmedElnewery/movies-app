@@ -16,7 +16,11 @@ const value = computed({
 });
 </script>
 <template>
-  <BaseTextInput v-model="value" placeholder="Search..." icon-position="left">
+  <BaseTextInput
+    v-model="value"
+    placeholder="Find Your Next Film Adventure"
+    icon-position="left"
+  >
     <template #icon>
       <IconSearch />
     </template>
