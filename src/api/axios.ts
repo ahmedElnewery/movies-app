@@ -1,5 +1,5 @@
 import axios, { AxiosHeaders } from "axios";
-const baseURL = "https://movies-json-server.vercel.app/";
+const baseURL = "http://localhost:3000/";
 function api(headers?: AxiosHeaders) {
   const axiosInstance = axios.create({
     baseURL,

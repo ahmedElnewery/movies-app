@@ -60,7 +60,6 @@ async function updateBookMark({
   const MoviesListBeforeUpdate = _.cloneDeep(moviesList.value);
   try {
     //optimestic update
-    // const clonedMoviesList = _.cloneDeep(moviesList.value);
     const selectedMovie = moviesList.value.find(
       (movie: IMovie) => movie.id === id
     );
