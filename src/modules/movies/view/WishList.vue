@@ -27,10 +27,7 @@ async function fetchMovies() {
   } catch (error) {
     console.error(error);
   } finally {
-    // fake wait loading
-    setTimeout(() => {
-      loading.value = false;
-    }, 300);
+    loading.value = false;
   }
 }
 

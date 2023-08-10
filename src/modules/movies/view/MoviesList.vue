@@ -47,10 +47,7 @@ async function fetchMovies(search = searchQuery.value) {
   } catch (error) {
     console.error(error);
   } finally {
-    // fake loading
-    setTimeout(() => {
-      loading.value = false;
-    }, 300);
+    loading.value = false;
   }
 }
 async function updateBookMark({
@@ -75,10 +72,7 @@ async function updateBookMark({
     });
   } catch (error) {
     if ((error as Error).message) {
-      // fake wait for show error
-      setTimeout(() => {
-        moviesList.value = MoviesListBeforeUpdate;
-      }, 500);
+      moviesList.value = MoviesListBeforeUpdate;
     }
   }
 }
