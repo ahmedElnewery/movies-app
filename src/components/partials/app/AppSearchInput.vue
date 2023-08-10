@@ -4,7 +4,7 @@ import BaseTextInput from "@/components/partials/base/form/BaseTextInput.vue";
 import IconSearch from "@/components/icons/IconSearch.vue";
 //props
 const props = defineProps(["modelValue"]);
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(["update:modelValue", "enter-press"]);
 //computed
 const value = computed({
   get() {
@@ -21,6 +21,7 @@ const value = computed({
     placeholder="Search.."
     icon-position="left"
     autoFocus
+    @enter-press="emit('enter-press')"
   >
     <template #icon>
       <IconSearch />

@@ -14,7 +14,7 @@ const router = createRouter({
       children: [
         ...homeRoutes,
         ...moviesRoutes,
-        { path: "/:pathMatch(.*)*", name: "NotFound", component: AppNotFound },
+        { path: "/:pathMatch(.*)*", name: "not-found", component: AppNotFound },
       ],
     },
     {
@@ -22,7 +22,6 @@ const router = createRouter({
       component: AuthLayout,
       children: [...authRoutes],
     },
-    ,
   ],
 });
 

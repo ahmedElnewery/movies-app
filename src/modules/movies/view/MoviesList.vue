@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, watch, type Ref } from "vue";
 import type { IMovie } from "./../@types/movies";
-import axios, { AxiosError, type CancelTokenSource } from "axios";
+import axios, { type CancelTokenSource } from "axios";
 //components
 import MoviesService from "./../services/movies.service";
 import AppSearchInput from "@/components/partials/app/AppSearchInput.vue";
@@ -9,11 +9,14 @@ import AppPage from "@/components/partials/app/AppPage.vue";
 import AppTitle from "@/components/partials/app/AppTitle.vue";
 import MoviesCollections from "../components/MoviesCollections.vue";
 import * as _ from "lodash";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
 //data
 const loading: Ref<boolean> = ref(true);
 const moviesList: Ref<IMovie[]> = ref([]);
 const errorMessage: Ref<string> = ref("");
-const searchQuery: Ref<string> = ref("");
+const searchQuery: Ref<string> = ref(route.query.q as string);
 const cancelToken: Ref<CancelTokenSource | null> = ref(null);
 // onCreation
 fetchMovies();
@@ -25,7 +28,7 @@ watch(searchQuery, (newSearchQuery) => {
 });
 
 //methods
-async function fetchMovies(search = "") {
+async function fetchMovies(search = searchQuery.value) {
   loading.value = true;
   if (cancelToken.value) {
     cancelToken.value.cancel("Request Cancelled");
@@ -60,15 +63,14 @@ async function updateBookMark({
   const MoviesListBeforeUpdate = _.cloneDeep(moviesList.value);
   try {
     //optimestic update
-    const clonedMoviesList = _.cloneDeep(moviesList.value);
-    const selectedMovie = clonedMoviesList.find(
+    // const clonedMoviesList = _.cloneDeep(moviesList.value);
+    const selectedMovie = moviesList.value.find(
       (movie: IMovie) => movie.id === id
     );
     if (selectedMovie) {
       selectedMovie.isBookmarked = !selectedMovie.isBookmarked;
     }
-    moviesList.value = clonedMoviesList;
-    await MoviesService.updateBookmarkedMovie(id, {
+    await MoviesService.updateBookmarkedMovie("jljop[jopjopnj]", {
       isBookmarked: !isBookmarked,
     });
   } catch (error) {

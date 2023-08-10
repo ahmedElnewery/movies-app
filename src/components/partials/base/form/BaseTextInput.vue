@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { TextInputProps } from "@/components/@types/input";
 const { type = "text" } = defineProps<TextInputProps>();
-const emit = defineEmits(["update:modelValue", "blur"]);
+const emit = defineEmits(["update:modelValue", "blur", "enter-press"]);
 </script>
 <template>
   <div class="relative">
@@ -16,6 +16,7 @@ const emit = defineEmits(["update:modelValue", "blur"]);
         emit('update:modelValue', ($event.target as HTMLInputElement).value)
       "
       @blur="emit('blur')"
+      @keyup.enter="emit('enter-press')"
     />
     <span
       class="icon"
