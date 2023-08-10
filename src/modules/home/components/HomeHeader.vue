@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import IconSearch from "@/components/icons/IconSearch.vue";
+import AppSearchInput from "@/components/partials/app/AppSearchInput.vue";
 import BaseContainer from "@/components/partials/base/BaseContainer.vue";
+import { ref, type Ref } from "vue";
+
+const searchQuery: Ref<string> = ref("");
 </script>
 <template>
   <header class="bg-muted-900">
@@ -14,16 +17,7 @@ import BaseContainer from "@/components/partials/base/BaseContainer.vue";
             Bookmark and organize films that resonate with you. Join now and
             explore the world of cinema tailored to your tastes.
           </p>
-          <div class="relative">
-            <input
-              class="w-full py-3 ps-12 pe-6 outline-0 rounded-full"
-              type="text"
-              autocomplete="off"
-            />
-            <span class="absolute top-1/2 z-10 -translate-y-1/2 left-3"
-              ><IconSearch />
-            </span>
-          </div>
+          <AppSearchInput v-model="searchQuery" />
         </div>
       </div>
     </BaseContainer>
