@@ -24,6 +24,7 @@ async function fetchMovie() {
     }
   } catch (error) {
   } finally {
+    // fake loading to just show
     setInterval(() => {
       loading.value = false;
     }, 300);
@@ -32,7 +33,7 @@ async function fetchMovie() {
 </script>
 <template>
   <AppPage>
-    <AppTitle v-if="movie && !loading">{{ movie?.fullTitle }}</AppTitle>
+    <AppTitle v-if="movie && !loading">{{ movie.fullTitle }}</AppTitle>
     <BaseSkeleton v-else class="h-8 w-1/2" />
     <section>
       <div class="xl:w-4/5 mx-auto w-full">

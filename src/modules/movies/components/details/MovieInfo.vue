@@ -39,7 +39,7 @@ defineProps<MovieInfoProps>();
 
                 <span class="font-thin">/ 10</span>
               </div>
-              <BaseSkeleton class="h-6 w-24" v-else> </BaseSkeleton>
+              <BaseSkeleton class="h-6 w-48" v-else> </BaseSkeleton>
             </td>
           </tr>
           <tr>
@@ -50,7 +50,7 @@ defineProps<MovieInfoProps>();
               <div v-if="movie && !loading">
                 {{ movie.year }}
               </div>
-              <BaseSkeleton class="h-6 w-24" v-else> </BaseSkeleton>
+              <BaseSkeleton class="h-6 w-48" v-else> </BaseSkeleton>
             </td>
           </tr>
           <tr>
@@ -61,7 +61,7 @@ defineProps<MovieInfoProps>();
               <div v-if="movie && !loading">
                 {{ movie.rank }}
               </div>
-              <BaseSkeleton class="h-6 w-24" v-else> </BaseSkeleton>
+              <BaseSkeleton class="h-6 w-48" v-else> </BaseSkeleton>
             </td>
           </tr>
           <tr>
@@ -81,7 +81,7 @@ defineProps<MovieInfoProps>();
                   {{ actor }},
                 </span>
               </div>
-              <BaseSkeleton class="h-6 w-24" v-else> </BaseSkeleton>
+              <BaseSkeleton class="h-6 w-48" v-else> </BaseSkeleton>
             </td>
           </tr>
         </tbody>

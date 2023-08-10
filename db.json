@@ -10,7 +10,7 @@
       "crew": "Frank Darabont (dir.), Tim Robbins, Morgan Freeman",
       "imDbRating": "9.2",
       "imDbRatingCount": "2601982",
-      "isBookmarked": false
+      "isBookmarked": true
     },
     {
       "id": "tt0068646",
@@ -46,7 +46,7 @@
       "crew": "Francis Ford Coppola (dir.), Al Pacino, Robert De Niro",
       "imDbRating": "9.0",
       "imDbRatingCount": "1238324",
-      "isBookmarked": false
+      "isBookmarked": true
     },
     {
       "id": "tt0108052",
@@ -58,7 +58,7 @@
       "crew": "Steven Spielberg (dir.), Liam Neeson, Ralph Fiennes",
       "imDbRating": "8.9",
       "imDbRatingCount": "1323179",
-      "isBookmarked": false
+      "isBookmarked": true
     },
     {
       "id": "tt0167260",
@@ -118,7 +118,7 @@
       "crew": "Robert Zemeckis (dir.), Tom Hanks, Robin Wright",
       "imDbRating": "8.8",
       "imDbRatingCount": "2010300",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0137523",
@@ -130,7 +130,7 @@
       "crew": "David Fincher (dir.), Brad Pitt, Edward Norton",
       "imDbRating": "8.7",
       "imDbRatingCount": "2049453",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt1375666",
@@ -154,7 +154,7 @@
       "crew": "Peter Jackson (dir.), Elijah Wood, Ian McKellen",
       "imDbRating": "8.7",
       "imDbRatingCount": "1613814",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0080684",
@@ -166,7 +166,7 @@
       "crew": "Irvin Kershner (dir.), Mark Hamill, Harrison Ford",
       "imDbRating": "8.7",
       "imDbRatingCount": "1259330",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0133093",
@@ -178,7 +178,7 @@
       "crew": "Lana Wachowski (dir.), Keanu Reeves, Laurence Fishburne",
       "imDbRating": "8.7",
       "imDbRatingCount": "1868004",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0099685",
@@ -190,7 +190,7 @@
       "crew": "Martin Scorsese (dir.), Robert De Niro, Ray Liotta",
       "imDbRating": "8.7",
       "imDbRatingCount": "1125265",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0073486",
@@ -202,7 +202,7 @@
       "crew": "Milos Forman (dir.), Jack Nicholson, Louise Fletcher",
       "imDbRating": "8.6",
       "imDbRatingCount": "987684",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0114369",
@@ -214,7 +214,7 @@
       "crew": "David Fincher (dir.), Morgan Freeman, Brad Pitt",
       "imDbRating": "8.6",
       "imDbRatingCount": "1597383",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0047478",
@@ -226,7 +226,7 @@
       "crew": "Akira Kurosawa (dir.), Toshirô Mifune, Takashi Shimura",
       "imDbRating": "8.6",
       "imDbRatingCount": "340513",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0038650",
@@ -238,7 +238,7 @@
       "crew": "Frank Capra (dir.), James Stewart, Donna Reed",
       "imDbRating": "8.6",
       "imDbRatingCount": "446943",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0102926",
@@ -250,7 +250,7 @@
       "crew": "Jonathan Demme (dir.), Jodie Foster, Anthony Hopkins",
       "imDbRating": "8.6",
       "imDbRatingCount": "1392914",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0317248",
@@ -262,7 +262,7 @@
       "crew": "Fernando Meirelles (dir.), Alexandre Rodrigues, Leandro Firmino",
       "imDbRating": "8.6",
       "imDbRatingCount": "743997",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0120815",
@@ -274,7 +274,7 @@
       "crew": "Steven Spielberg (dir.), Tom Hanks, Matt Damon",
       "imDbRating": "8.6",
       "imDbRatingCount": "1354701",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0118799",
@@ -286,7 +286,7 @@
       "crew": "Roberto Benigni (dir.), Roberto Benigni, Nicoletta Braschi",
       "imDbRating": "8.6",
       "imDbRatingCount": "679667",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0120689",
@@ -298,7 +298,7 @@
       "crew": "Frank Darabont (dir.), Tom Hanks, Michael Clarke Duncan",
       "imDbRating": "8.6",
       "imDbRatingCount": "1264973",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0816692",
@@ -310,7 +310,7 @@
       "crew": "Christopher Nolan (dir.), Matthew McConaughey, Anne Hathaway",
       "imDbRating": "8.6",
       "imDbRatingCount": "1744482",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0076759",
@@ -322,7 +322,7 @@
       "crew": "George Lucas (dir.), Mark Hamill, Harrison Ford",
       "imDbRating": "8.6",
       "imDbRatingCount": "1331500",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0103064",
@@ -334,7 +334,7 @@
       "crew": "James Cameron (dir.), Arnold Schwarzenegger, Linda Hamilton",
       "imDbRating": "8.5",
       "imDbRatingCount": "1073505",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0088763",
@@ -346,7 +346,7 @@
       "crew": "Robert Zemeckis (dir.), Michael J. Fox, Christopher Lloyd",
       "imDbRating": "8.5",
       "imDbRatingCount": "1168163",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0245429",
@@ -358,7 +358,7 @@
       "crew": "Hayao Miyazaki (dir.), Daveigh Chase, Suzanne Pleshette",
       "imDbRating": "8.5",
       "imDbRatingCount": "737590",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0054215",
@@ -370,7 +370,7 @@
       "crew": "Alfred Hitchcock (dir.), Anthony Perkins, Janet Leigh",
       "imDbRating": "8.5",
       "imDbRatingCount": "656547",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0253474",
@@ -382,7 +382,7 @@
       "crew": "Roman Polanski (dir.), Adrien Brody, Thomas Kretschmann",
       "imDbRating": "8.5",
       "imDbRatingCount": "809659",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0110413",
@@ -394,7 +394,7 @@
       "crew": "Luc Besson (dir.), Jean Reno, Gary Oldman",
       "imDbRating": "8.5",
       "imDbRatingCount": "1132554",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt6751668",
@@ -418,7 +418,7 @@
       "crew": "Roger Allers (dir.), Matthew Broderick, Jeremy Irons",
       "imDbRating": "8.5",
       "imDbRatingCount": "1030673",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0172495",
@@ -442,7 +442,7 @@
       "crew": "Tony Kaye (dir.), Edward Norton, Edward Furlong",
       "imDbRating": "8.5",
       "imDbRatingCount": "1100865",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0114814",
@@ -454,7 +454,7 @@
       "crew": "Bryan Singer (dir.), Kevin Spacey, Gabriel Byrne",
       "imDbRating": "8.5",
       "imDbRatingCount": "1065037",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0407887",
@@ -466,7 +466,7 @@
       "crew": "Martin Scorsese (dir.), Leonardo DiCaprio, Matt Damon",
       "imDbRating": "8.5",
       "imDbRatingCount": "1293272",
-      "isBookmarked": true
+      "isBookmarked": false
     }
   ]
 }

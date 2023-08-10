@@ -44,7 +44,10 @@ async function fetchMovies(search = "") {
   } catch (error) {
     console.error(error);
   } finally {
-    loading.value = false;
+    // fake loading
+    setTimeout(() => {
+      loading.value = false;
+    }, 300);
   }
 }
 async function updateBookMark({
@@ -56,26 +59,25 @@ async function updateBookMark({
 }) {
   const MoviesListBeforeUpdate = _.cloneDeep(moviesList.value);
   try {
-    const clonedMoviesList = _.cloneDeep(moviesList.value);
     //optimestic update
+    const clonedMoviesList = _.cloneDeep(moviesList.value);
     const selectedMovie = clonedMoviesList.find(
       (movie: IMovie) => movie.id === id
     );
     if (selectedMovie) {
       selectedMovie.isBookmarked = !selectedMovie.isBookmarked;
     }
-
     moviesList.value = clonedMoviesList;
     await MoviesService.updateBookmarkedMovie(id, {
       isBookmarked: !isBookmarked,
     });
   } catch (error) {
     if ((error as Error).message) {
+      // fake wait for show error
       setTimeout(() => {
         moviesList.value = MoviesListBeforeUpdate;
       }, 500);
     }
-  } finally {
   }
 }
 </script>
