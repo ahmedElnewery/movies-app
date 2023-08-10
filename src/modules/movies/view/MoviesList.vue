@@ -70,7 +70,7 @@ async function updateBookMark({
     if (selectedMovie) {
       selectedMovie.isBookmarked = !selectedMovie.isBookmarked;
     }
-    await MoviesService.updateBookmarkedMovie("jljop[jopjopnj]", {
+    await MoviesService.updateBookmarkedMovie(id, {
       isBookmarked: !isBookmarked,
     });
   } catch (error) {

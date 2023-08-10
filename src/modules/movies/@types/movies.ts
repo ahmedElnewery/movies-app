@@ -10,11 +10,11 @@ export interface IMovie {
   imDbRatingCount: string;
   isBookmarked: boolean;
 }
-export interface MoviesCollectionsProps {
+export type MoviesCollectionsProps = {
   movies: IMovie[];
   loading?: boolean;
-}
-export interface MovieInfoProps {
+};
+export type MovieInfoProps = {
   movie: IMovie | null;
   loading?: boolean;
-}
+};

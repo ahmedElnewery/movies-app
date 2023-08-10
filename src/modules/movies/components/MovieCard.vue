@@ -11,7 +11,7 @@ const emit = defineEmits(["toggle-bookmark"]);
   <div class="relative group rounded-md overflow-hidden">
     <div class="w-full">
       <img
-        class="object-contain w-full"
+        class="object-contain w-full group-hover:transform group-hover:scale-105 transition-transform"
         :src="movie.image"
         :alt="movie.title"
       />

@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import type { TextInputProps } from "@/components/@types/input";
-const { type = "text" } = defineProps<TextInputProps>();
+import { Size, type TextInputProps } from "@/components/@types/input";
+withDefaults(defineProps<TextInputProps>(), {
+  size: Size.MEDIUM,
+  type: "text",
+});
 const emit = defineEmits(["update:modelValue", "blur", "enter-press"]);
 </script>
 <template>
   <div class="relative">
     <input
       class="input"
+      :class="[size === Size.MEDIUM ? 'md' : 'sm']"
       :value="modelValue"
       :type="type"
       v-bind="$attrs"
@@ -21,7 +25,10 @@ const emit = defineEmits(["update:modelValue", "blur", "enter-press"]);
     <span
       class="icon"
       v-if="iconPosition"
-      :class="[iconPosition === 'right' ? 'end-3' : 'start-3']"
+      :class="[
+        'text-muted-900',
+        iconPosition === 'right' ? 'end-3' : 'start-3',
+      ]"
     >
       <slot name="icon" />
     </span>
@@ -31,7 +38,13 @@ const emit = defineEmits(["update:modelValue", "blur", "enter-press"]);
 
 <style scoped>
 .input {
-  @apply w-full py-3 ps-12 pe-6 outline-0 rounded-full text-lg border border-muted-900 focus:border-primary shadow;
+  @apply w-full text-muted-900 ps-12 pe-6 outline-0 rounded-full text-lg border border-muted-900 focus:border-primary shadow;
+}
+.input.sm {
+  @apply py-1.5 !important;
+}
+.input.md {
+  @apply py-3 !important;
 }
 .icon {
   @apply absolute top-1/2 z-10 -translate-y-1/2;

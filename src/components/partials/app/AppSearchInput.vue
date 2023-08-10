@@ -2,13 +2,17 @@
 import { computed } from "vue";
 import BaseTextInput from "@/components/partials/base/form/BaseTextInput.vue";
 import IconSearch from "@/components/icons/IconSearch.vue";
+import { Position, Size } from "@/components/@types/input";
 //props
-const props = defineProps(["modelValue"]);
+const { size, modelValue } = defineProps<{
+  modelValue: string;
+  size?: Size;
+}>();
 const emit = defineEmits(["update:modelValue", "enter-press"]);
 //computed
 const value = computed({
   get() {
-    return props.modelValue;
+    return modelValue;
   },
   set(value) {
     emit("update:modelValue", value);
@@ -19,7 +23,8 @@ const value = computed({
   <BaseTextInput
     v-model="value"
     placeholder="Search.."
-    icon-position="left"
+    :icon-position="Position.LEFT"
+    :size="size"
     autoFocus
     @enter-press="emit('enter-press')"
   >

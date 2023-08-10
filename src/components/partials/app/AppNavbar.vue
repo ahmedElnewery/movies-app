@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import IconSearch from "@/components/icons/IconSearch.vue";
-import IconBookmark from "@/components/icons/IconBookmark.vue";
 import BaseContainer from "@/components/partials/base/BaseContainer.vue";
+import { ref, type Ref } from "vue";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+// data
+const searchQuery: Ref<string> = ref("");
+function goToSearch() {
+  router.push({ name: "movies", query: { q: searchQuery.value } });
+}
 </script>
 <template>
   <nav class="bg-dark text-white py-4 max-h-[var(--navbar-height)]">
     <BaseContainer>
       <div class="flex-between">
-        <div class="flex-items-center gap-x-12">
+        <div class="flex-items-center sm:gap-x-12 gap-x-6">
           <div class="brand">
             <RouterLink :to="{ name: 'home' }">
               <div class="first-letter:text-primary text-3xl">
@@ -16,27 +23,34 @@ import BaseContainer from "@/components/partials/base/BaseContainer.vue";
             >
           </div>
           <ul class="flex-items-center gap-4">
-            <li>
-              <RouterLink :to="{ name: 'movies' }">Browse </RouterLink>
+            <li class="navbar-link">
+              <RouterLink
+                class="navbar-link"
+                exact-active-class="navbar-link--active"
+                :to="{ name: 'movies' }"
+                >Browse
+              </RouterLink>
             </li>
             <li>
-              <RouterLink :to="{ name: 'wishlist' }">My Movies </RouterLink>
+              <RouterLink
+                class="navbar-link"
+                exact-active-class="navbar-link--active"
+                :to="{ name: 'wishlist' }"
+                >My Movies
+              </RouterLink>
             </li>
           </ul>
-        </div>
-        <div class="md:flex-items-center gap-6 hidden">
-          <RouterLink :to="{ name: 'movies' }">
-            <IconSearch />
-          </RouterLink>
-          <RouterLink :to="{ name: 'wishlist' }">
-            <IconBookmark />
-          </RouterLink>
-          <RouterLink :to="{ name: 'login' }"> Login </RouterLink>
-          <RouterLink :to="{ name: 'register' }"> Register </RouterLink>
         </div>
       </div>
     </BaseContainer>
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+.navbar-link {
+  @apply hover:text-muted-100 transition-colors py-2;
+}
+.navbar-link--active {
+  @apply border-b border-primary  !important;
+}
+</style>
