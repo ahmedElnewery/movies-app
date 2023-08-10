@@ -8,4 +8,4 @@ npm run dev
 
 ### version
 
-**node version:** React, Redux, TailwindCSS
+**node version:** v18.17.0
