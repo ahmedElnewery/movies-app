@@ -9,3 +9,7 @@ export interface IMovie {
   imDbRating: string;
   imDbRatingCount: string;
 }
+export interface MoviesCollectionsProps {
+  movies: IMovie[];
+  loading?: boolean;
+}
