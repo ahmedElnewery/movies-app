@@ -5,7 +5,7 @@ const { type = "text" } = defineProps<TextInputProps>();
 <template>
   <div class="relative">
     <input
-      class="w-full py-3 ps-12 pe-6 outline-0 rounded-full text-lg"
+      class="w-full py-3 ps-12 pe-6 outline-0 rounded-full text-lg border border-muted-900"
       :value="modelValue"
       :type="type"
       autocomplete="off"
