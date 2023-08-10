@@ -6,8 +6,8 @@ import MovieInfo from "./MovieInfo.vue";
 defineProps<MovieInfoProps>();
 </script>
 <template>
-  <div class="pt-20 grid md:grid-cols-2 grid-cols-1 gap-8">
-    <div class="max-w-72 w-72 mx-auto">
+  <div class="pt-20 grid md:grid-cols-2 grid-cols-1 gap-12">
+    <div class="w-64 sm:w-80 mx-auto">
       <img
         v-if="!loading && movie"
         class="rounded-md w-full object-contain"

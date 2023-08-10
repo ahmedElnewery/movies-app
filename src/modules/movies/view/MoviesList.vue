@@ -16,7 +16,7 @@ const route = useRoute();
 const loading: Ref<boolean> = ref(true);
 const moviesList: Ref<IMovie[]> = ref([]);
 const errorMessage: Ref<string> = ref("");
-const searchQuery: Ref<string> = ref(route.query.q as string);
+const searchQuery: Ref<string> = ref((route.query.q as string) ?? "");
 const cancelToken: Ref<CancelTokenSource | null> = ref(null);
 // onCreation
 fetchMovies();

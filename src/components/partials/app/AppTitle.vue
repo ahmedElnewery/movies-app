@@ -9,6 +9,6 @@
 }
 .title::after {
   content: "";
-  @apply absolute h-[3px] w-32 bg-primary  -bottom-3 start-0;
+  @apply absolute h-[3px] w-1/2  bg-primary  -bottom-3 start-0;
 }
 </style>

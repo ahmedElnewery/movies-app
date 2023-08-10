@@ -3,16 +3,17 @@ import { computed } from "vue";
 import BaseTextInput from "@/components/partials/base/form/BaseTextInput.vue";
 import IconSearch from "@/components/icons/IconSearch.vue";
 import { Position, Size } from "@/components/@types/input";
-//props
-const { size, modelValue } = defineProps<{
+type SearchInputProps = {
   modelValue: string;
   size?: Size;
-}>();
+};
+//props
+const props = defineProps<SearchInputProps>();
 const emit = defineEmits(["update:modelValue", "enter-press"]);
 //computed
 const value = computed({
   get() {
-    return modelValue;
+    return props.modelValue;
   },
   set(value) {
     emit("update:modelValue", value);

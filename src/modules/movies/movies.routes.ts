@@ -1,6 +1,3 @@
-import MoviesList from "./view/MoviesList.vue";
-import WishList from "./view/WishList.vue";
-import MovieDetails from "./view/MovieDetails.vue";
 import MoviesIndex from "./view/Index.vue";
 export default [
   {
@@ -8,9 +5,21 @@ export default [
     path: "/movies",
     component: MoviesIndex,
     children: [
-      { name: "movies", path: "", component: MoviesList },
-      { name: "movieDetails", path: ":id", component: MovieDetails },
-      { name: "wishlist", path: "wishlist", component: WishList },
+      {
+        name: "movies",
+        path: "",
+        component: () => import("./view/MoviesList.vue"),
+      },
+      {
+        name: "movieDetails",
+        path: ":id",
+        component: () => import("./view/MovieDetails.vue"),
+      },
+      {
+        name: "wishlist",
+        path: "wishlist",
+        component: () => import("./view/WishList.vue"),
+      },
     ],
   },
 ];
