@@ -5,6 +5,7 @@ defineProps<{
   movie: IMovie;
 }>();
 </script>
+
 <template>
   <div class="relative group rounded-md overflow-hidden">
     <div class="w-full">
@@ -15,7 +16,7 @@ defineProps<{
       />
     </div>
     <RouterLink
-      :to="`/movies/${movie.id}`"
+      :to="{ name: 'movieDetails', params: { id: movie.id } }"
       class="absolute inset-0 z-20"
     ></RouterLink>
     <div

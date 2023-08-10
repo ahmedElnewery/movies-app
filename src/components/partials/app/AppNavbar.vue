@@ -4,7 +4,7 @@ import IconBookmark from "@/components/icons/IconBookmark.vue";
 import BaseContainer from "@/components/partials/base/BaseContainer.vue";
 </script>
 <template>
-  <nav class="bg-dark text-white py-4">
+  <nav class="bg-dark text-white py-4 max-h-[var(--navbar-height)]">
     <BaseContainer>
       <div class="flex-between">
         <div class="flex-items-center gap-x-12">

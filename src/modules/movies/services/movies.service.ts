@@ -8,5 +8,9 @@ class MoviesService {
   ): Promise<AxiosResponse<IMovie[]>> {
     return api().get("/movies", config);
   }
+
+  static getMovieDetails(id: string) {
+    return api().get(`/movies/${id}`);
+  }
 }
 export default MoviesService;
