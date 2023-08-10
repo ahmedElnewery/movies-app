@@ -8,6 +8,7 @@ const { type = "text" } = defineProps<TextInputProps>();
       class="input"
       :value="modelValue"
       :type="type"
+      v-bind="$attrs"
       autocomplete="off"
       :placeholder="placeholder"
       @input="

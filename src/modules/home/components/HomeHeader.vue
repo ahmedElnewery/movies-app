@@ -13,7 +13,7 @@ const searchQuery: Ref<string> = ref("");
           <h1 class="font-bold text-5xl italic mb-6 text-white">
             Discover and Bookmark Your Favorite Movies
           </h1>
-          <p class="italic tracking-wider text-2xl mb-8 text-white">
+          <p class="italic tracking-wider text-2xl mb-8 text-muted-100">
             Bookmark and organize films that resonate with you. Join now and
             explore the world of cinema tailored to your tastes.
           </p>

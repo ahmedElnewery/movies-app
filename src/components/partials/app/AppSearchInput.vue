@@ -18,8 +18,9 @@ const value = computed({
 <template>
   <BaseTextInput
     v-model="value"
-    placeholder="Find Your Next Film Adventure"
+    placeholder="Search.."
     icon-position="left"
+    autoFocus
   >
     <template #icon>
       <IconSearch />

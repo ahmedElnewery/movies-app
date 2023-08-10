@@ -53,6 +53,7 @@ watch(searchQuery, (newSearchQuery) => {
   <main>
     <div class="py-8 bg-muted-900 min-h-screen">
       <BaseContainer>
+        <h3 class="text-white text-4xl mt-12 mb-4">Movie List</h3>
         <div class="perfect-center mt-12 mb-12">
           <div class="w-1/2">
             <AppSearchInput v-model="searchQuery" />
@@ -74,7 +75,7 @@ watch(searchQuery, (newSearchQuery) => {
           v-if="!loading && moviesList.length === 0"
         >
           <div>
-            <p class="mb-12 font-medium text-2xl text-white">
+            <p class="mb-12 font-medium text-2xl text-muted-100">
               <span class="text-primary me-3">Oops!</span> Your movie magic
               search came up empty
             </p>
