@@ -44,17 +44,7 @@
             "imDbRating": "9.0",
             "imDbRatingCount": "1238324"
         },
-        {
-            "id": "tt0050083",
-            "rank": "5",
-            "title": "12 Angry Men",
-            "fullTitle": "12 Angry Men (1957)",
-            "year": "1957",
-            "image": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UX128_CR0,3,128,176_AL_.jpg",
-            "crew": "Sidney Lumet (dir.), Henry Fonda, Lee J. Cobb",
-            "imDbRating": "8.9",
-            "imDbRatingCount": "768716"
-        },
+   
         {
             "id": "tt0108052",
             "rank": "6",

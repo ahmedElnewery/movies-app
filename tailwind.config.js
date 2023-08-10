@@ -17,7 +17,8 @@ module.exports = {
           primary:"#6100C2",
           muted:{
             900:'#181818'
-          }
+          },
+          yellow:"#eab308"
       }
     },
    
