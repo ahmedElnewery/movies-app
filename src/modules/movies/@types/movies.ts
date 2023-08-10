@@ -13,3 +13,7 @@ export interface MoviesCollectionsProps {
   movies: IMovie[];
   loading?: boolean;
 }
+export interface MovieInfoProps {
+  movie: IMovie | null;
+  loading?: boolean;
+}

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseSkeleton from "@/components/partials/base/BaseSkeleton.vue";
 import type { MoviesCollectionsProps } from "../@types/movies";
 import MovieCard from "./MovieCard.vue";
 
@@ -14,7 +15,7 @@ defineProps<MoviesCollectionsProps>();
       :key="movie.id"
       v-if="!loading"
     />
-    <BaseSkeleton v-else v-for="i in 8" class="h-[300px]" />
+    <BaseSkeleton v-else v-for="i in 8" class="h-[300px] w-full" />
   </div>
   <div
     class="text-center perfect-center min-h-[400px]"

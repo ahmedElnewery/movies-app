@@ -4,9 +4,7 @@ import type { IMovie } from "./../@types/movies";
 import axios, { type CancelTokenSource } from "axios";
 //components
 import MoviesService from "./../services/movies.service";
-import MovieCard from "../components/MovieCard.vue";
 import AppSearchInput from "@/components/partials/app/AppSearchInput.vue";
-import BaseSkeleton from "@/components/partials/base/BaseSkeleton.vue";
 import AppPage from "@/components/partials/app/AppPage.vue";
 import AppTitle from "@/components/partials/app/AppTitle.vue";
 import MoviesCollections from "../components/MoviesCollections.vue";
@@ -56,11 +54,13 @@ watch(searchQuery, (newSearchQuery) => {
   <AppPage>
     <AppTitle>All Movies</AppTitle>
     <div class="perfect-center mt-8 mb-12">
-      <div class="w-1/2">
+      <div class="md:w-1/2 w-full">
         <AppSearchInput v-model="searchQuery" />
       </div>
     </div>
-    <MoviesCollections :movies="moviesList" :loading="loading" />
+    <section>
+      <MoviesCollections :movies="moviesList" :loading="loading" />
+    </section>
   </AppPage>
 </template>
 
