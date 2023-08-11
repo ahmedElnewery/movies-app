@@ -25,16 +25,16 @@ const emit = defineEmits(["toggle-bookmark"]);
     <BaseSkeleton v-else v-for="i in 8" class="h-[300px] w-full" />
   </div>
   <div
-    class="text-center perfect-center min-h-[400px]"
+    class="text-center perfect-center pt-8"
     v-if="!loading && movies.length === 0"
   >
     <div>
       <img
         src="@/assets/img/no-results-searching.svg"
-        class="max-w-sm lg:max-w-xl"
+        class="max-w-xs lg:max-w-xl w-full mx-auto"
         alt="not result"
       />
-      <p class="mt-12 font-medium text-2xl text-muted-100">
+      <p class="mt-12 font-medium sm:text-2xl text-lg text-muted-100">
         <span class="text-primary me-3">Oops!</span> Your movie magic search
         came up empty
       </p>

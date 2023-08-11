@@ -6,7 +6,7 @@ import AppPage from "./AppPage.vue";
   <AppPage class="bg-muted-100">
     <BaseContainer>
       <div class="perfect-center pt-12">
-        <div class="sm:max-w-xs lg:max-w-lg">
+        <div class="sm:max-w-xs lg:max-w-lg w-60">
           <img
             class="w-full"
             src="@/assets/img/not-found.svg"

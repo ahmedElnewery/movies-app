@@ -1,13 +1,17 @@
 import axios, { AxiosHeaders } from "axios";
-const baseURL = "http://localhost:3000/";
+const baseURL = import.meta.env.VITE_APP_BASE_URL;
+
 function api(headers?: AxiosHeaders) {
   const axiosInstance = axios.create({
     baseURL,
     timeout: 5000,
-    headers: { ...headers },
+    headers: {
+      "Content-Type": "application/json",
+      ...headers,
+    },
   });
   // adding interceptors
-  axios.interceptors.request.use(
+  axiosInstance.interceptors.request.use(
     function (config) {
       return config;
     },
@@ -16,7 +20,7 @@ function api(headers?: AxiosHeaders) {
     }
   );
 
-  axios.interceptors.response.use(
+  axiosInstance.interceptors.response.use(
     function (response) {
       return response;
     },
