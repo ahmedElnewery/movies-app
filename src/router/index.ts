@@ -4,7 +4,6 @@ import moviesRoutes from "@/modules/movies/movies.routes";
 import authRoutes from "@/modules/auth/auth.routes";
 import DefaultLayout from "@/layouts/Default.vue";
 import AuthLayout from "@/layouts/Auth.vue";
-import AppNotFound from "@/components/partials/app/AppNotFound.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -14,7 +13,17 @@ const router = createRouter({
       children: [
         ...homeRoutes,
         ...moviesRoutes,
-        { path: "/:pathMatch(.*)*", name: "not-found", component: AppNotFound },
+        {
+          path: "/:pathMatch(.*)*",
+          name: "not-found",
+          component: () => import("@/components/partials/app/AppNotFound.vue"),
+        },
+        {
+          path: "/server-down",
+          name: "server-down",
+          component: () =>
+            import("@/components/partials/app/AppServerDown.vue"),
+        },
       ],
     },
     {

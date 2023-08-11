@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev:client": "vite",
+    "dev:client": "vite --host",
     "dev:server": "npx json-server db.json --watch",
     "dev": "npm run dev:client & npm run dev:server",
     "build": "run-p type-check build-only",

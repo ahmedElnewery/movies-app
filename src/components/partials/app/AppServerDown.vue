@@ -6,12 +6,16 @@ import AppPage from "./AppPage.vue";
   <AppPage class="bg-muted-100">
     <BaseContainer>
       <div class="perfect-center pt-12">
-        <div class="sm:max-w-xs lg:max-w-2xl w-60 sm:w-full">
+        <div class="lg:max-w-lg w-60 sm:w-full">
           <img
-            class="w-full"
-            src="@/assets/img/not-found.svg"
-            alt="not found"
+            class="w-full mb-8"
+            src="@/assets/img/server-down.svg"
+            alt="server-down"
           />
+          <p class="text-center text-lg font-medium">
+            <span class="text-2xl text-primary font-semibold">Opps !</span>
+            Server is down right now
+          </p>
         </div>
       </div>
     </BaseContainer>
