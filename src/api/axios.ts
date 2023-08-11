@@ -30,6 +30,7 @@ function api(headers?: AxiosHeaders) {
       // handling error here
       if (error.response) {
         if (error.response.status >= 500) {
+          /// server error
           router.push({ name: "server-down" });
         }
       }

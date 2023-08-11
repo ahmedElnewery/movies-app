@@ -10,6 +10,7 @@ import AppTitle from "@/components/partials/app/AppTitle.vue";
 import MoviesCollections from "../components/MoviesCollections.vue";
 import * as _ from "lodash";
 import { useRoute } from "vue-router";
+import { toast } from "vue3-toastify";
 
 const route = useRoute();
 //data
@@ -66,6 +67,7 @@ async function updateBookMark({
     if (selectedMovie) {
       selectedMovie.isBookmarked = !selectedMovie.isBookmarked;
     }
+
     await MoviesService.updateBookmarkedMovie(id, {
       isBookmarked: !isBookmarked,
     });
@@ -73,6 +75,7 @@ async function updateBookMark({
     if ((error as Error).message) {
       moviesList.value = MoviesListBeforeUpdate;
     }
+    toast.error("somehing went wrong in bookmark movie");
   }
 }
 </script>
