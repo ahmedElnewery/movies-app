@@ -10,7 +10,7 @@
       "crew": "Francis Ford Coppola (dir.), Marlon Brando, Al Pacino",
       "imDbRating": "9.2",
       "imDbRatingCount": "1797425",
-      "isBookmarked": false
+      "isBookmarked": true
     },
     {
       "id": "tt0468569",
@@ -22,7 +22,7 @@
       "crew": "Christopher Nolan (dir.), Christian Bale, Heath Ledger",
       "imDbRating": "9.0",
       "imDbRatingCount": "2573417",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0071562",
@@ -34,7 +34,7 @@
       "crew": "Francis Ford Coppola (dir.), Al Pacino, Robert De Niro",
       "imDbRating": "9.0",
       "imDbRatingCount": "1238324",
-      "isBookmarked": false
+      "isBookmarked": true
     },
     {
       "id": "tt0108052",
