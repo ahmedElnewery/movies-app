@@ -22,7 +22,7 @@
       "crew": "Francis Ford Coppola (dir.), Marlon Brando, Al Pacino",
       "imDbRating": "9.2",
       "imDbRatingCount": "1797425",
-      "isBookmarked": false
+      "isBookmarked": true
     },
     {
       "id": "tt0468569",
@@ -34,7 +34,7 @@
       "crew": "Christopher Nolan (dir.), Christian Bale, Heath Ledger",
       "imDbRating": "9.0",
       "imDbRatingCount": "2573417",
-      "isBookmarked": false
+      "isBookmarked": true
     },
     {
       "id": "tt0071562",
@@ -46,7 +46,7 @@
       "crew": "Francis Ford Coppola (dir.), Al Pacino, Robert De Niro",
       "imDbRating": "9.0",
       "imDbRatingCount": "1238324",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0108052",
@@ -58,7 +58,7 @@
       "crew": "Steven Spielberg (dir.), Liam Neeson, Ralph Fiennes",
       "imDbRating": "8.9",
       "imDbRatingCount": "1323179",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0167260",
@@ -82,7 +82,7 @@
       "crew": "Quentin Tarantino (dir.), John Travolta, Uma Thurman",
       "imDbRating": "8.9",
       "imDbRatingCount": "1994473",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0120737",
@@ -106,7 +106,7 @@
       "crew": "Sergio Leone (dir.), Clint Eastwood, Eli Wallach",
       "imDbRating": "8.8",
       "imDbRatingCount": "746148",
-      "isBookmarked": true
+      "isBookmarked": false
     },
     {
       "id": "tt0109830",

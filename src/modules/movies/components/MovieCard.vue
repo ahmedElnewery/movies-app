@@ -8,31 +8,33 @@ const emit = defineEmits(["toggle-bookmark"]);
 </script>
 
 <template>
-  <div class="relative group rounded-md overflow-hidden">
-    <div class="w-full">
-      <img
-        class="object-contain w-full group-hover:transform group-hover:scale-105 transition-transform"
-        :src="movie.image"
-        :alt="movie.title"
-      />
+  <Transition name="fade" appear>
+    <div class="relative group rounded-md overflow-hidden">
+      <div class="w-full">
+        <img
+          class="object-contain w-full group-hover:transform group-hover:scale-105 transition-transform"
+          :src="movie.image"
+          :alt="movie.title"
+        />
+      </div>
+      <RouterLink
+        :to="{ name: 'movieDetails', params: { id: movie.id } }"
+        class="absolute inset-0 z-20"
+      ></RouterLink>
+      <div class="overlay overlay-top">
+        <button
+          class="absolute sm:top-6 sm:end-6 top-3 end-3 text-yellow"
+          :class="[movie.isBookmarked ? 'fill-yellow' : 'fill-orange-100']"
+          @click="emit('toggle-bookmark', { id: movie.id })"
+        >
+          <IconBookmark />
+        </button>
+      </div>
+      <div class="overlay overlay-bottom">
+        <p class="text-white truncate">{{ movie.fullTitle }}</p>
+      </div>
     </div>
-    <RouterLink
-      :to="{ name: 'movieDetails', params: { id: movie.id } }"
-      class="absolute inset-0 z-20"
-    ></RouterLink>
-    <div class="overlay overlay-top">
-      <button
-        class="absolute sm:top-6 sm:end-6 top-3 end-3 text-yellow"
-        :class="[movie.isBookmarked ? 'fill-yellow' : 'fill-orange-100']"
-        @click="emit('toggle-bookmark', { id: movie.id })"
-      >
-        <IconBookmark />
-      </button>
-    </div>
-    <div class="overlay overlay-bottom">
-      <p class="text-white truncate">{{ movie.fullTitle }}</p>
-    </div>
-  </div>
+  </Transition>
 </template>
 
 <style scoped>

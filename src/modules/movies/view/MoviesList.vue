@@ -75,7 +75,7 @@ async function updateBookMark({
     if ((error as Error).message) {
       moviesList.value = MoviesListBeforeUpdate;
     }
-    toast.error("somehing went wrong in bookmark movie");
+    toast.error("Something went wrong in bookmark movie");
   }
 }
 </script>
