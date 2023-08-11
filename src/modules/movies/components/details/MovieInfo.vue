@@ -8,7 +8,7 @@ defineProps<MovieInfoProps>();
 <template>
   <div class="text-muted-100">
     <div class="mb-12">
-      <h2 class="text-white text-2xl" v-if="movie && !loading">
+      <h2 class="text-white sm:text-2xl text-lg" v-if="movie && !loading">
         {{ movie.title }}
       </h2>
       <BaseSkeleton class="h-6 w-full" v-else />

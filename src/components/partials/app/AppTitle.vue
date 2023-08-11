@@ -5,7 +5,7 @@
 
 <style scoped>
 .title {
-  @apply text-white text-4xl mb-4;
+  @apply text-white sm:text-4xl mb-4 text-2xl;
 }
 .title::after {
   content: "";

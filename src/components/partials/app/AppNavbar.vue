@@ -48,7 +48,7 @@ function goToSearch() {
 
 <style scoped>
 .navbar-link {
-  @apply hover:text-muted-100 transition-colors py-2;
+  @apply hover:text-muted-100 transition-colors py-2 text-sm sm:text-base;
 }
 .navbar-link--active {
   @apply border-b border-primary  !important;
